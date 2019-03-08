@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tx.springboot.dao.UserMapper" >
+  <resultMap id="BaseResultMap" type="com.tx.springboot.pojo.User" >
+    <constructor >
+      <idArg column="id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="email" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="passworld" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="uername" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="role" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="status" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="regTime" jdbcType="DATE" javaType="java.util.Date" />
+      <arg column="regIp" jdbcType="VARCHAR" javaType="java.lang.String" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, email, passworld, uername, role, status, regTime, regIp
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from userftx
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="findByName" resultType="com.tx.springboot.pojo.User" parameterType="String" >
+    select
+        ID,
+        EMAIL,
+        PASSWORLD,
+        UERNAME,
+        ROLE,
+        STATUS,
+        REGTIME,
+        REGIP
+    from userftx
+    where UERNAME = #{value}
+  </select>
+  <select id="findById" resultType="com.tx.springboot.pojo.User" parameterType="java.lang.Integer" >
+    select
+        ID,
+        EMAIL,
+        PASSWORLD,
+        UERNAME,
+        ROLE,
+        STATUS,
+        REGTIME,
+        REGIP
+    from userftx
+    where id = #{value}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from userftx
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.tx.springboot.pojo.User" >
+    insert into userftx (id, email, passworld, 
+      uername, role, status, 
+      regTime, regIp)
+    values (#{id,jdbcType=INTEGER}, #{email,jdbcType=VARCHAR}, #{passworld,jdbcType=VARCHAR}, 
+      #{uername,jdbcType=VARCHAR}, #{role,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, 
+      #{regtime,jdbcType=DATE}, #{regip,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.tx.springboot.pojo.User" >
+    insert into userftx
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="email != null" >
+        email,
+      </if>
+      <if test="passworld != null" >
+        passworld,
+      </if>
+      <if test="uername != null" >
+        uername,
+      </if>
+      <if test="role != null" >
+        role,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="regtime != null" >
+        regTime,
+      </if>
+      <if test="regip != null" >
+        regIp,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="passworld != null" >
+        #{passworld,jdbcType=VARCHAR},
+      </if>
+      <if test="uername != null" >
+        #{uername,jdbcType=VARCHAR},
+      </if>
+      <if test="role != null" >
+        #{role,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="regtime != null" >
+        #{regtime,jdbcType=DATE},
+      </if>
+      <if test="regip != null" >
+        #{regip,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tx.springboot.pojo.User" >
+    update userftx
+    <set >
+      <if test="email != null" >
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="passworld != null" >
+        passworld = #{passworld,jdbcType=VARCHAR},
+      </if>
+      <if test="uername != null" >
+        uername = #{uername,jdbcType=VARCHAR},
+      </if>
+      <if test="role != null" >
+        role = #{role,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="regtime != null" >
+        regTime = #{regtime,jdbcType=DATE},
+      </if>
+      <if test="regip != null" >
+        regIp = #{regip,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tx.springboot.pojo.User" >
+    update userftx
+    set email = #{email,jdbcType=VARCHAR},
+      passworld = #{passworld,jdbcType=VARCHAR},
+      uername = #{uername,jdbcType=VARCHAR},
+      role = #{role,jdbcType=VARCHAR},
+      status = #{status,jdbcType=INTEGER},
+      regTime = #{regtime,jdbcType=DATE},
+      regIp = #{regip,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

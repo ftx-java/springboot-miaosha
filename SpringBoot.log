@@ -1,0 +1,276 @@
+2018-11-21 21:07:30.982  INFO 11320 --- [main] c.t.s.SpringBootSsm01Application         : Starting SpringBootSsm01Application on DESKTOP-8L49ADQ with PID 11320 (C:\Users\ftx\Desktop\spring-boot-ssm-01\target\classes started by ftx in C:\Users\ftx\Desktop\spring-boot-ssm-01)
+2018-11-21 21:07:31.000  INFO 11320 --- [main] c.t.s.SpringBootSsm01Application         : No active profile set, falling back to default profiles: default
+2018-11-21 21:07:31.079  INFO 11320 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@60d8c9b7: startup date [Wed Nov 21 21:07:31 CST 2018]; root of context hierarchy
+2018-11-21 21:07:32.029  WARN 11320 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[dao]' package. Please check your configuration.
+2018-11-21 21:07:32.735  INFO 11320 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9a116d30] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-21 21:07:32.873  INFO 11320 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$1991ba62] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-21 21:07:33.371  INFO 11320 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2018-11-21 21:07:33.394  INFO 11320 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-11-21 21:07:33.395  INFO 11320 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
+2018-11-21 21:07:33.400  INFO 11320 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.14] using APR version [1.6.2].
+2018-11-21 21:07:33.401  INFO 11320 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2018-11-21 21:07:33.401  INFO 11320 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2018-11-21 21:07:34.456  INFO 11320 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.0.2l  25 May 2017]
+2018-11-21 21:07:34.564  INFO 11320 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-11-21 21:07:34.565  INFO 11320 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3486 ms
+2018-11-21 21:07:34.644  INFO 11320 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet statViewServlet mapped to [/druid/*]
+2018-11-21 21:07:34.645  INFO 11320 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-11-21 21:07:34.649  INFO 11320 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-21 21:07:34.649  INFO 11320 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-21 21:07:34.650  INFO 11320 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-11-21 21:07:34.650  INFO 11320 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-21 21:07:34.651  INFO 11320 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-11-21 21:07:35.465  INFO 11320 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/emp/update],methods=[GET]}" onto public void com.tx.springboot.controller.EmpController.update(com.tx.springboot.pojo.Emp)
+2018-11-21 21:07:35.468  INFO 11320 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/emp/delete],methods=[POST]}" onto public void com.tx.springboot.controller.EmpController.delete(int)
+2018-11-21 21:07:35.468  INFO 11320 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/emp/insert],methods=[POST]}" onto public void com.tx.springboot.controller.EmpController.insert(com.tx.springboot.pojo.Emp)
+2018-11-21 21:07:35.469  INFO 11320 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/emp/select],methods=[GET]}" onto public com.tx.springboot.pojo.Emp com.tx.springboot.controller.EmpController.select(int)
+2018-11-21 21:07:35.469  INFO 11320 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.tx.springboot.controller.HelloController.hello()
+2018-11-21 21:07:35.472  INFO 11320 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/update]}" onto public void com.tx.springboot.controller.UserController.update(com.tx.springboot.pojo.User)
+2018-11-21 21:07:35.473  INFO 11320 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/delete/{id}]}" onto public void com.tx.springboot.controller.UserController.delete(int)
+2018-11-21 21:07:35.475  INFO 11320 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/insert]}" onto public void com.tx.springboot.controller.UserController.insert(com.tx.springboot.pojo.User)
+2018-11-21 21:07:35.475  INFO 11320 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/select/{id}]}" onto public com.tx.springboot.pojo.User com.tx.springboot.controller.UserController.select(int)
+2018-11-21 21:07:35.477  INFO 11320 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String)
+2018-11-21 21:07:35.482  INFO 11320 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-11-21 21:07:35.484  INFO 11320 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-11-21 21:07:35.485  INFO 11320 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-11-21 21:07:35.490  INFO 11320 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-11-21 21:07:35.490  INFO 11320 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-11-21 21:07:35.630  INFO 11320 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-21 21:07:35.828  INFO 11320 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@60d8c9b7: startup date [Wed Nov 21 21:07:31 CST 2018]; root of context hierarchy
+2018-11-21 21:07:35.878  INFO 11320 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-21 21:07:35.878  INFO 11320 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-21 21:07:36.179  INFO 11320 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-11-21 21:07:36.180  INFO 11320 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'druid' has been autodetected for JMX exposure
+2018-11-21 21:07:36.187  INFO 11320 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'druid': registering with JMX server as MBean [com.alibaba.druid.pool:name=druid,type=DruidDataSource]
+2018-11-21 21:07:36.197  INFO 11320 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2018-11-21 21:07:36.214  INFO 11320 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found {0} custom documentation plugin(s)
+2018-11-21 21:07:36.222  INFO 11320 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-11-21 21:07:36.226  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method delete was emp-controller
+2018-11-21 21:07:36.227  INFO 11320 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: delete belongs to groups: [[ResourceGroup{groupName='emp-controller', position=0, controller=com.tx.springboot.controller.EmpController}]] 
+2018-11-21 21:07:36.229  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method insert was emp-controller
+2018-11-21 21:07:36.229  INFO 11320 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: insert belongs to groups: [[ResourceGroup{groupName='emp-controller', position=0, controller=com.tx.springboot.controller.EmpController}]] 
+2018-11-21 21:07:36.229  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method select was emp-controller
+2018-11-21 21:07:36.230  INFO 11320 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: select belongs to groups: [[ResourceGroup{groupName='emp-controller', position=0, controller=com.tx.springboot.controller.EmpController}]] 
+2018-11-21 21:07:36.230  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was emp-controller
+2018-11-21 21:07:36.230  INFO 11320 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: update belongs to groups: [[ResourceGroup{groupName='emp-controller', position=0, controller=com.tx.springboot.controller.EmpController}]] 
+2018-11-21 21:07:36.230  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method hello was hello-controller
+2018-11-21 21:07:36.230  INFO 11320 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: hello belongs to groups: [[ResourceGroup{groupName='hello-controller', position=0, controller=com.tx.springboot.controller.HelloController}]] 
+2018-11-21 21:07:36.231  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method delete was user-controller
+2018-11-21 21:07:36.231  INFO 11320 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: delete belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.tx.springboot.controller.UserController}]] 
+2018-11-21 21:07:36.231  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method insert was user-controller
+2018-11-21 21:07:36.231  INFO 11320 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: insert belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.tx.springboot.controller.UserController}]] 
+2018-11-21 21:07:36.232  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method select was user-controller
+2018-11-21 21:07:36.232  INFO 11320 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: select belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.tx.springboot.controller.UserController}]] 
+2018-11-21 21:07:36.232  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was user-controller
+2018-11-21 21:07:36.232  INFO 11320 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: update belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.tx.springboot.controller.UserController}]] 
+2018-11-21 21:07:36.237  INFO 11320 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/user-controller Description: user-controller Position: 0
+2018-11-21 21:07:36.238  INFO 11320 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/hello-controller Description: hello-controller Position: 0
+2018-11-21 21:07:36.238  INFO 11320 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/emp-controller Description: emp-controller Position: 0
+2018-11-21 21:07:36.256  INFO 11320 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-11-21 21:07:36.256  INFO 11320 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Void(true)
+2018-11-21 21:07:36.261  INFO 11320 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-11-21 21:07:36.261  INFO 11320 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Void(true)
+2018-11-21 21:07:36.266  INFO 11320 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /emp/delete.com.tx.springboot.controller.EmpController.delete.DefaultGenericTypeNamingStrategy
+2018-11-21 21:07:36.267  INFO 11320 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /emp/delete.com.tx.springboot.controller.EmpController.delete.DefaultGenericTypeNamingStrategy
+2018-11-21 21:07:36.279  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method delete was emp-controller
+2018-11-21 21:07:36.290  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method delete was emp-controller
+2018-11-21 21:07:36.297  INFO 11320 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-11-21 21:07:36.297  INFO 11320 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Void(true)
+2018-11-21 21:07:36.297  INFO 11320 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-11-21 21:07:36.297  INFO 11320 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Void(true)
+2018-11-21 21:07:36.297  INFO 11320 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /emp/insert.com.tx.springboot.controller.EmpController.insert.DefaultGenericTypeNamingStrategy
+2018-11-21 21:07:36.297  INFO 11320 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /emp/insert.com.tx.springboot.controller.EmpController.insert.DefaultGenericTypeNamingStrategy
+2018-11-21 21:07:36.299  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method insert was emp-controller
+2018-11-21 21:07:36.301  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method insert was emp-controller
+2018-11-21 21:07:36.302  INFO 11320 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.tx.springboot.pojo.Emp(true)
+2018-11-21 21:07:36.302  INFO 11320 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.tx.springboot.pojo.Emp(true)
+2018-11-21 21:07:36.303  INFO 11320 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.tx.springboot.pojo.Emp(true)
+2018-11-21 21:07:36.303  INFO 11320 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.tx.springboot.pojo.Emp(true)
+2018-11-21 21:07:36.337  INFO 11320 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.tx.springboot.pojo.Emp(true)
+2018-11-21 21:07:36.337  INFO 11320 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.tx.springboot.pojo.Emp(true)
+2018-11-21 21:07:36.337  INFO 11320 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.tx.springboot.pojo.Emp(true)
+2018-11-21 21:07:36.337  INFO 11320 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.tx.springboot.pojo.Emp(true)
+2018-11-21 21:07:36.338  INFO 11320 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /emp/select.com.tx.springboot.controller.EmpController.select.DefaultGenericTypeNamingStrategy
+2018-11-21 21:07:36.338  INFO 11320 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /emp/select.com.tx.springboot.controller.EmpController.select.DefaultGenericTypeNamingStrategy
+2018-11-21 21:07:36.339  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method select was emp-controller
+2018-11-21 21:07:36.340  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method select was emp-controller
+2018-11-21 21:07:36.341  INFO 11320 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-11-21 21:07:36.342  INFO 11320 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Void(true)
+2018-11-21 21:07:36.342  INFO 11320 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-11-21 21:07:36.342  INFO 11320 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Void(true)
+2018-11-21 21:07:36.343  INFO 11320 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /emp/update.com.tx.springboot.controller.EmpController.update.DefaultGenericTypeNamingStrategy
+2018-11-21 21:07:36.343  INFO 11320 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /emp/update.com.tx.springboot.controller.EmpController.update.DefaultGenericTypeNamingStrategy
+2018-11-21 21:07:36.344  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was emp-controller
+2018-11-21 21:07:36.345  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was emp-controller
+2018-11-21 21:07:36.349  INFO 11320 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.String(true)
+2018-11-21 21:07:36.349  INFO 11320 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.String(true)
+2018-11-21 21:07:36.349  INFO 11320 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.String(true)
+2018-11-21 21:07:36.349  INFO 11320 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2018-11-21 21:07:36.350  INFO 11320 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /hello.com.tx.springboot.controller.HelloController.hello.DefaultGenericTypeNamingStrategy
+2018-11-21 21:07:36.350  INFO 11320 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /hello.com.tx.springboot.controller.HelloController.hello.DefaultGenericTypeNamingStrategy
+2018-11-21 21:07:36.350  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method hello was hello-controller
+2018-11-21 21:07:36.351  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method hello was hello-controller
+2018-11-21 21:07:36.351  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method hello was hello-controller
+2018-11-21 21:07:36.352  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method hello was hello-controller
+2018-11-21 21:07:36.352  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method hello was hello-controller
+2018-11-21 21:07:36.353  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method hello was hello-controller
+2018-11-21 21:07:36.353  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method hello was hello-controller
+2018-11-21 21:07:36.353  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method hello was hello-controller
+2018-11-21 21:07:36.354  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method hello was hello-controller
+2018-11-21 21:07:36.354  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method hello was hello-controller
+2018-11-21 21:07:36.355  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method hello was hello-controller
+2018-11-21 21:07:36.355  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method hello was hello-controller
+2018-11-21 21:07:36.356  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method hello was hello-controller
+2018-11-21 21:07:36.357  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method hello was hello-controller
+2018-11-21 21:07:36.357  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method hello was hello-controller
+2018-11-21 21:07:36.358  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method hello was hello-controller
+2018-11-21 21:07:36.360  INFO 11320 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-11-21 21:07:36.360  INFO 11320 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Void(true)
+2018-11-21 21:07:36.360  INFO 11320 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-11-21 21:07:36.361  INFO 11320 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Void(true)
+2018-11-21 21:07:36.361  INFO 11320 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /user/delete/{id}.com.tx.springboot.controller.UserController.delete.DefaultGenericTypeNamingStrategy
+2018-11-21 21:07:36.361  INFO 11320 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /user/delete/{id}.com.tx.springboot.controller.UserController.delete.DefaultGenericTypeNamingStrategy
+2018-11-21 21:07:36.363  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method delete was user-controller
+2018-11-21 21:07:36.364  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method delete was user-controller
+2018-11-21 21:07:36.366  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method delete was user-controller
+2018-11-21 21:07:36.367  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method delete was user-controller
+2018-11-21 21:07:36.369  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method delete was user-controller
+2018-11-21 21:07:36.370  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method delete was user-controller
+2018-11-21 21:07:36.370  INFO 11320 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_1
+2018-11-21 21:07:36.371  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method delete was user-controller
+2018-11-21 21:07:36.372  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method delete was user-controller
+2018-11-21 21:07:36.374  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method delete was user-controller
+2018-11-21 21:07:36.375  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method delete was user-controller
+2018-11-21 21:07:36.376  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method delete was user-controller
+2018-11-21 21:07:36.377  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method delete was user-controller
+2018-11-21 21:07:36.379  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method delete was user-controller
+2018-11-21 21:07:36.379  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method delete was user-controller
+2018-11-21 21:07:36.380  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method delete was user-controller
+2018-11-21 21:07:36.382  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method delete was user-controller
+2018-11-21 21:07:36.383  INFO 11320 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-11-21 21:07:36.383  INFO 11320 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Void(true)
+2018-11-21 21:07:36.383  INFO 11320 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-11-21 21:07:36.383  INFO 11320 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Void(true)
+2018-11-21 21:07:36.383  INFO 11320 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /user/insert.com.tx.springboot.controller.UserController.insert.DefaultGenericTypeNamingStrategy
+2018-11-21 21:07:36.383  INFO 11320 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /user/insert.com.tx.springboot.controller.UserController.insert.DefaultGenericTypeNamingStrategy
+2018-11-21 21:07:36.385  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method insert was user-controller
+2018-11-21 21:07:36.386  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method insert was user-controller
+2018-11-21 21:07:36.387  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method insert was user-controller
+2018-11-21 21:07:36.387  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method insert was user-controller
+2018-11-21 21:07:36.389  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method insert was user-controller
+2018-11-21 21:07:36.390  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method insert was user-controller
+2018-11-21 21:07:36.390  INFO 11320 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: insertUsingPOST_1
+2018-11-21 21:07:36.391  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method insert was user-controller
+2018-11-21 21:07:36.392  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method insert was user-controller
+2018-11-21 21:07:36.394  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method insert was user-controller
+2018-11-21 21:07:36.395  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method insert was user-controller
+2018-11-21 21:07:36.397  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method insert was user-controller
+2018-11-21 21:07:36.398  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method insert was user-controller
+2018-11-21 21:07:36.400  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method insert was user-controller
+2018-11-21 21:07:36.401  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method insert was user-controller
+2018-11-21 21:07:36.403  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method insert was user-controller
+2018-11-21 21:07:36.403  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method insert was user-controller
+2018-11-21 21:07:36.405  INFO 11320 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.tx.springboot.pojo.User(true)
+2018-11-21 21:07:36.405  INFO 11320 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.tx.springboot.pojo.User(true)
+2018-11-21 21:07:36.405  INFO 11320 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.tx.springboot.pojo.User(true)
+2018-11-21 21:07:36.405  INFO 11320 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.tx.springboot.pojo.User(true)
+2018-11-21 21:07:36.408  INFO 11320 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.tx.springboot.pojo.User(true)
+2018-11-21 21:07:36.408  INFO 11320 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.tx.springboot.pojo.User(true)
+2018-11-21 21:07:36.409  INFO 11320 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.tx.springboot.pojo.User(true)
+2018-11-21 21:07:36.409  INFO 11320 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.tx.springboot.pojo.User(true)
+2018-11-21 21:07:36.410  INFO 11320 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /user/select/{id}.com.tx.springboot.controller.UserController.select.DefaultGenericTypeNamingStrategy
+2018-11-21 21:07:36.410  INFO 11320 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /user/select/{id}.com.tx.springboot.controller.UserController.select.DefaultGenericTypeNamingStrategy
+2018-11-21 21:07:36.411  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method select was user-controller
+2018-11-21 21:07:36.412  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method select was user-controller
+2018-11-21 21:07:36.413  INFO 11320 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: selectUsingGET_1
+2018-11-21 21:07:36.414  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method select was user-controller
+2018-11-21 21:07:36.416  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method select was user-controller
+2018-11-21 21:07:36.417  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method select was user-controller
+2018-11-21 21:07:36.418  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method select was user-controller
+2018-11-21 21:07:36.420  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method select was user-controller
+2018-11-21 21:07:36.421  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method select was user-controller
+2018-11-21 21:07:36.421  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method select was user-controller
+2018-11-21 21:07:36.422  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method select was user-controller
+2018-11-21 21:07:36.426  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method select was user-controller
+2018-11-21 21:07:36.427  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method select was user-controller
+2018-11-21 21:07:36.429  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method select was user-controller
+2018-11-21 21:07:36.430  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method select was user-controller
+2018-11-21 21:07:36.432  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method select was user-controller
+2018-11-21 21:07:36.433  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method select was user-controller
+2018-11-21 21:07:36.435  INFO 11320 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-11-21 21:07:36.435  INFO 11320 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Void(true)
+2018-11-21 21:07:36.435  INFO 11320 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Void(true)
+2018-11-21 21:07:36.435  INFO 11320 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Void(true)
+2018-11-21 21:07:36.436  INFO 11320 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /user/update.com.tx.springboot.controller.UserController.update.DefaultGenericTypeNamingStrategy
+2018-11-21 21:07:36.436  INFO 11320 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /user/update.com.tx.springboot.controller.UserController.update.DefaultGenericTypeNamingStrategy
+2018-11-21 21:07:36.437  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was user-controller
+2018-11-21 21:07:36.438  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was user-controller
+2018-11-21 21:07:36.438  INFO 11320 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_1
+2018-11-21 21:07:36.439  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was user-controller
+2018-11-21 21:07:36.441  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was user-controller
+2018-11-21 21:07:36.443  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was user-controller
+2018-11-21 21:07:36.444  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was user-controller
+2018-11-21 21:07:36.446  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was user-controller
+2018-11-21 21:07:36.446  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was user-controller
+2018-11-21 21:07:36.448  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was user-controller
+2018-11-21 21:07:36.449  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was user-controller
+2018-11-21 21:07:36.451  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was user-controller
+2018-11-21 21:07:36.452  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was user-controller
+2018-11-21 21:07:36.453  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was user-controller
+2018-11-21 21:07:36.454  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was user-controller
+2018-11-21 21:07:36.455  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was user-controller
+2018-11-21 21:07:36.456  INFO 11320 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was user-controller
+2018-11-21 21:07:36.484 ERROR 11320 --- [main] o.apache.catalina.core.StandardService   : Failed to start connector [Connector[HTTP/1.1-8082]]
+
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8082]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:261) [spring-boot-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:198) [spring-boot-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:300) [spring-boot-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162) [spring-boot-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) [spring-context-5.0.10.RELEASE.jar:5.0.10.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) [spring-boot-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:386) [spring-boot-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) [spring-boot-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1242) [spring-boot-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1230) [spring-boot-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at com.tx.springboot.SpringBootSsm01Application.main(SpringBootSsm01Application.java:20) [classes/:na]
+Caused by: org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1020) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	... 13 common frames omitted
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_181]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_181]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_181]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_181]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_181]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:219) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1151) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:591) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1018) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	... 14 common frames omitted
+
+2018-11-21 21:07:36.490  INFO 11320 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-11-21 21:07:36.522  INFO 11320 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-11-21 21:07:36.529 ERROR 11320 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8082 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8082, or configure this application to listen on another port.
+
+2018-11-21 21:07:36.530  INFO 11320 --- [main] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@60d8c9b7: startup date [Wed Nov 21 21:07:31 CST 2018]; root of context hierarchy
+2018-11-21 21:07:36.535  INFO 11320 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-11-21 21:07:36.536  INFO 11320 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
