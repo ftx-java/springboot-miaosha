@@ -3,154 +3,259 @@
 <mapper namespace="com.tx.springboot.dao.UserMapper" >
   <resultMap id="BaseResultMap" type="com.tx.springboot.pojo.User" >
     <constructor >
-      <idArg column="id" jdbcType="INTEGER" javaType="java.lang.Integer" />
-      <arg column="email" jdbcType="VARCHAR" javaType="java.lang.String" />
-      <arg column="passworld" jdbcType="VARCHAR" javaType="java.lang.String" />
-      <arg column="uername" jdbcType="VARCHAR" javaType="java.lang.String" />
-      <arg column="role" jdbcType="VARCHAR" javaType="java.lang.String" />
-      <arg column="status" jdbcType="INTEGER" javaType="java.lang.Integer" />
-      <arg column="regTime" jdbcType="DATE" javaType="java.util.Date" />
-      <arg column="regIp" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <idArg column="id" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="nickname" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="password" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="salt" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="head" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="register_date" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+      <arg column="last_login_date" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+      <arg column="login_count" jdbcType="INTEGER" javaType="java.lang.Integer" />
     </constructor>
   </resultMap>
-  <sql id="Base_Column_List" >
-    id, email, passworld, uername, role, status, regTime, regIp
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
   </sql>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, nickname, password, salt, head, register_date, last_login_date, login_count
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.tx.springboot.pojo.UserExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from user
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select 
     <include refid="Base_Column_List" />
-    from userftx
-    where id = #{id,jdbcType=INTEGER}
+    from user
+    where id = #{id,jdbcType=BIGINT}
   </select>
-  <select id="findByName" resultType="com.tx.springboot.pojo.User" parameterType="String" >
-    select
-        ID,
-        EMAIL,
-        PASSWORLD,
-        UERNAME,
-        ROLE,
-        STATUS,
-        REGTIME,
-        REGIP
-    from userftx
-    where UERNAME = #{value}
-  </select>
-  <select id="findById" resultType="com.tx.springboot.pojo.User" parameterType="java.lang.Integer" >
-    select
-        ID,
-        EMAIL,
-        PASSWORLD,
-        UERNAME,
-        ROLE,
-        STATUS,
-        REGTIME,
-        REGIP
-    from userftx
-    where id = #{value}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from userftx
-    where id = #{id,jdbcType=INTEGER}
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from user
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.tx.springboot.pojo.UserExample" >
+    delete from user
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
   </delete>
   <insert id="insert" parameterType="com.tx.springboot.pojo.User" >
-    insert into userftx (id, email, passworld, 
-      uername, role, status, 
-      regTime, regIp)
-    values (#{id,jdbcType=INTEGER}, #{email,jdbcType=VARCHAR}, #{passworld,jdbcType=VARCHAR}, 
-      #{uername,jdbcType=VARCHAR}, #{role,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, 
-      #{regtime,jdbcType=DATE}, #{regip,jdbcType=VARCHAR})
+    insert into user (id, nickname, password, 
+      salt, head, register_date, 
+      last_login_date, login_count)
+    values (#{id,jdbcType=BIGINT}, #{nickname,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{salt,jdbcType=VARCHAR}, #{head,jdbcType=VARCHAR}, #{registerDate,jdbcType=TIMESTAMP}, 
+      #{lastLoginDate,jdbcType=TIMESTAMP}, #{loginCount,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.tx.springboot.pojo.User" >
-    insert into userftx
+    insert into user
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
         id,
       </if>
-      <if test="email != null" >
-        email,
+      <if test="nickname != null" >
+        nickname,
       </if>
-      <if test="passworld != null" >
-        passworld,
+      <if test="password != null" >
+        password,
       </if>
-      <if test="uername != null" >
-        uername,
+      <if test="salt != null" >
+        salt,
       </if>
-      <if test="role != null" >
-        role,
+      <if test="head != null" >
+        head,
       </if>
-      <if test="status != null" >
-        status,
+      <if test="registerDate != null" >
+        register_date,
       </if>
-      <if test="regtime != null" >
-        regTime,
+      <if test="lastLoginDate != null" >
+        last_login_date,
       </if>
-      <if test="regip != null" >
-        regIp,
+      <if test="loginCount != null" >
+        login_count,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
-        #{id,jdbcType=INTEGER},
+        #{id,jdbcType=BIGINT},
       </if>
-      <if test="email != null" >
-        #{email,jdbcType=VARCHAR},
+      <if test="nickname != null" >
+        #{nickname,jdbcType=VARCHAR},
       </if>
-      <if test="passworld != null" >
-        #{passworld,jdbcType=VARCHAR},
+      <if test="password != null" >
+        #{password,jdbcType=VARCHAR},
       </if>
-      <if test="uername != null" >
-        #{uername,jdbcType=VARCHAR},
+      <if test="salt != null" >
+        #{salt,jdbcType=VARCHAR},
       </if>
-      <if test="role != null" >
-        #{role,jdbcType=VARCHAR},
+      <if test="head != null" >
+        #{head,jdbcType=VARCHAR},
       </if>
-      <if test="status != null" >
-        #{status,jdbcType=INTEGER},
+      <if test="registerDate != null" >
+        #{registerDate,jdbcType=TIMESTAMP},
       </if>
-      <if test="regtime != null" >
-        #{regtime,jdbcType=DATE},
+      <if test="lastLoginDate != null" >
+        #{lastLoginDate,jdbcType=TIMESTAMP},
       </if>
-      <if test="regip != null" >
-        #{regip,jdbcType=VARCHAR},
+      <if test="loginCount != null" >
+        #{loginCount,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.tx.springboot.pojo.User" >
-    update userftx
+  <select id="countByExample" parameterType="com.tx.springboot.pojo.UserExample" resultType="java.lang.Integer" >
+    select count(*) from user
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update user
     <set >
-      <if test="email != null" >
-        email = #{email,jdbcType=VARCHAR},
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="passworld != null" >
-        passworld = #{passworld,jdbcType=VARCHAR},
+      <if test="record.nickname != null" >
+        nickname = #{record.nickname,jdbcType=VARCHAR},
       </if>
-      <if test="uername != null" >
-        uername = #{uername,jdbcType=VARCHAR},
+      <if test="record.password != null" >
+        password = #{record.password,jdbcType=VARCHAR},
       </if>
-      <if test="role != null" >
-        role = #{role,jdbcType=VARCHAR},
+      <if test="record.salt != null" >
+        salt = #{record.salt,jdbcType=VARCHAR},
       </if>
-      <if test="status != null" >
-        status = #{status,jdbcType=INTEGER},
+      <if test="record.head != null" >
+        head = #{record.head,jdbcType=VARCHAR},
       </if>
-      <if test="regtime != null" >
-        regTime = #{regtime,jdbcType=DATE},
+      <if test="record.registerDate != null" >
+        register_date = #{record.registerDate,jdbcType=TIMESTAMP},
       </if>
-      <if test="regip != null" >
-        regIp = #{regip,jdbcType=VARCHAR},
+      <if test="record.lastLoginDate != null" >
+        last_login_date = #{record.lastLoginDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.loginCount != null" >
+        login_count = #{record.loginCount,jdbcType=INTEGER},
       </if>
     </set>
-    where id = #{id,jdbcType=INTEGER}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update user
+    set id = #{record.id,jdbcType=BIGINT},
+      nickname = #{record.nickname,jdbcType=VARCHAR},
+      password = #{record.password,jdbcType=VARCHAR},
+      salt = #{record.salt,jdbcType=VARCHAR},
+      head = #{record.head,jdbcType=VARCHAR},
+      register_date = #{record.registerDate,jdbcType=TIMESTAMP},
+      last_login_date = #{record.lastLoginDate,jdbcType=TIMESTAMP},
+      login_count = #{record.loginCount,jdbcType=INTEGER}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tx.springboot.pojo.User" >
+    update user
+    <set >
+      <if test="nickname != null" >
+        nickname = #{nickname,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="salt != null" >
+        salt = #{salt,jdbcType=VARCHAR},
+      </if>
+      <if test="head != null" >
+        head = #{head,jdbcType=VARCHAR},
+      </if>
+      <if test="registerDate != null" >
+        register_date = #{registerDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastLoginDate != null" >
+        last_login_date = #{lastLoginDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="loginCount != null" >
+        login_count = #{loginCount,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.tx.springboot.pojo.User" >
-    update userftx
-    set email = #{email,jdbcType=VARCHAR},
-      passworld = #{passworld,jdbcType=VARCHAR},
-      uername = #{uername,jdbcType=VARCHAR},
-      role = #{role,jdbcType=VARCHAR},
-      status = #{status,jdbcType=INTEGER},
-      regTime = #{regtime,jdbcType=DATE},
-      regIp = #{regip,jdbcType=VARCHAR}
-    where id = #{id,jdbcType=INTEGER}
+    update user
+    set nickname = #{nickname,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      salt = #{salt,jdbcType=VARCHAR},
+      head = #{head,jdbcType=VARCHAR},
+      register_date = #{registerDate,jdbcType=TIMESTAMP},
+      last_login_date = #{lastLoginDate,jdbcType=TIMESTAMP},
+      login_count = #{loginCount,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

@@ -16,7 +16,8 @@ import java.util.Map;
 
 /**
  * Demo class
- *http://localhost:8083/druid/login.html
+ * http://localhost:8083/druid/login.html
+ *
  * @author tx
  * @date 2018/10/29
  */

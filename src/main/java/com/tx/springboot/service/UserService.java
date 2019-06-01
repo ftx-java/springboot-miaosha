@@ -1,27 +1,59 @@
 package com.tx.springboot.service;
 
 import com.tx.springboot.pojo.User;
+import com.tx.springboot.pojo.vo.LoginVo;
 
-import java.util.List;
+import javax.servlet.http.HttpServletResponse;
 
 /**
- * Demo class
+ * 用户 Service
  *
  * @author tx
- * @date 2018/10/29
+ * @date 2019/04/13
  */
 public interface UserService {
-    public User select(int id);
+    /**
+     * 根据用户id查找用户信息
+     *
+     * @param id
+     * @return
+     */
+    User getById(Long id);
 
-    public void insert(User user);
+    /**
+     * 更改密码
+     *
+     * @param id
+     * @param formPass
+     * @return
+     */
+    boolean updatePassword(String token, long id, String formPass);
 
-    public void delete(int id);
+    /**
+     * 用户登录
+     *
+     * @param response
+     * @param loginVo
+     * @return
+     */
+    String login(HttpServletResponse response, LoginVo loginVo);
 
-    public void update(User user);
+    /**
+     * 添加cookie
+     *
+     * @param response
+     * @param user
+     * @param token
+     * @return
+     */
+    void addCookie(HttpServletResponse response, String token, User user);
 
-    public User findByName(String name);
-
-    public User findById(int id);
-
-   // public List<User> selectAll();
+    /**
+     * 根据客户端发的token去找redis中之前登录时存放的用户信息
+     *
+     * @param response
+     * @param token
+     * @return
+     */
+    User getByToken(HttpServletResponse response, String token);
 }

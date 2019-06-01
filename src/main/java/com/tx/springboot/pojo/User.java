@@ -3,98 +3,98 @@ package com.tx.springboot.pojo;
 import java.util.Date;
 
 public class User {
-    private Integer id;
+    private Long id;
 
-    private String email;
+    private String nickname;
 
-    private String passworld;
+    private String password;
 
-    private String uername;
+    private String salt;
 
-    private String role;
+    private String head;
 
-    private Integer status;
+    private Date registerDate;
 
-    private Date regtime;
+    private Date lastLoginDate;
 
-    private String regip;
+    private Integer loginCount;
 
-    public User(Integer id, String email, String passworld, String uername, String role, Integer status, Date regtime, String regip) {
+    public User(Long id, String nickname, String password, String salt, String head, Date registerDate, Date lastLoginDate, Integer loginCount) {
         this.id = id;
-        this.email = email;
-        this.passworld = passworld;
-        this.uername = uername;
-        this.role = role;
-        this.status = status;
-        this.regtime = regtime;
-        this.regip = regip;
+        this.nickname = nickname;
+        this.password = password;
+        this.salt = salt;
+        this.head = head;
+        this.registerDate = registerDate;
+        this.lastLoginDate = lastLoginDate;
+        this.loginCount = loginCount;
     }
 
     public User() {
         super();
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getEmail() {
-        return email;
+    public String getNickname() {
+        return nickname;
     }
 
-    public void setEmail(String email) {
-        this.email = email == null ? null : email.trim();
+    public void setNickname(String nickname) {
+        this.nickname = nickname == null ? null : nickname.trim();
     }
 
-    public String getPassworld() {
-        return passworld;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPassworld(String passworld) {
-        this.passworld = passworld == null ? null : passworld.trim();
+    public void setPassword(String password) {
+        this.password = password == null ? null : password.trim();
     }
 
-    public String getUername() {
-        return uername;
+    public String getSalt() {
+        return salt;
     }
 
-    public void setUername(String uername) {
-        this.uername = uername == null ? null : uername.trim();
+    public void setSalt(String salt) {
+        this.salt = salt == null ? null : salt.trim();
     }
 
-    public String getRole() {
-        return role;
+    public String getHead() {
+        return head;
     }
 
-    public void setRole(String role) {
-        this.role = role == null ? null : role.trim();
+    public void setHead(String head) {
+        this.head = head == null ? null : head.trim();
     }
 
-    public Integer getStatus() {
-        return status;
+    public Date getRegisterDate() {
+        return registerDate;
     }
 
-    public void setStatus(Integer status) {
-        this.status = status;
+    public void setRegisterDate(Date registerDate) {
+        this.registerDate = registerDate;
     }
 
-    public Date getRegtime() {
-        return regtime;
+    public Date getLastLoginDate() {
+        return lastLoginDate;
     }
 
-    public void setRegtime(Date regtime) {
-        this.regtime = regtime;
+    public void setLastLoginDate(Date lastLoginDate) {
+        this.lastLoginDate = lastLoginDate;
     }
 
-    public String getRegip() {
-        return regip;
+    public Integer getLoginCount() {
+        return loginCount;
     }
 
-    public void setRegip(String regip) {
-        this.regip = regip == null ? null : regip.trim();
+    public void setLoginCount(Integer loginCount) {
+        this.loginCount = loginCount;
     }
 }
